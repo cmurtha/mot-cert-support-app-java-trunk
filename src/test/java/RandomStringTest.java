@@ -1,5 +1,3 @@
-package com.ministryoftesting;
-
 import com.ministryoftesting.service.RandomString;
 import org.junit.jupiter.api.Test;
 

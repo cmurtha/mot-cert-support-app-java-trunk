@@ -1,6 +1,5 @@
-package com.ministryoftesting;
+package e2e;
 
-import com.google.gson.JsonArray;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -14,12 +13,14 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginTest {
+public class LoginAPITest {
 
     @Test
     public void testPageUpdatesToProjectPageAfterLogin() {
         WebDriverManager.chromedriver().setup();
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://localhost:8080");

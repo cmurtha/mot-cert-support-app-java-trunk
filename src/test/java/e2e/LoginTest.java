@@ -1,5 +1,6 @@
-package com.ministryoftesting.api;
+package e2e;
 
+import com.google.gson.JsonArray;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -13,14 +14,11 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT, classes = TimesheetManagerApplication.class)
-@ActiveProfiles("dev")
-public class LoginAPITest {
+public class LoginTest {
 
     @Test
     public void testPageUpdatesToProjectPageAfterLogin() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().clearDriverCache().setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
