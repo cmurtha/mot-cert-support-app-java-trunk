@@ -1,3 +1,5 @@
+package e2e;
+
 import com.ministryoftesting.service.RandomString;
 import org.junit.jupiter.api.Test;
 
